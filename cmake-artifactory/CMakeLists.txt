@@ -1,11 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
-project(MyProject)
+# CMakeLists.txt
+cmake_minimum_required(VERSION 3.5)
 
-# Add source files
-add_executable(my_project src/main.cpp src/my_lib.cpp)
+# Set the project name
+project(HelloWorld)
 
-# Include directories
-target_include_directories(my_project PUBLIC include)
+# Specify the C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Link libraries
-# target_link_libraries(my_project PUBLIC my_lib)  # If you had a library
+# Add the executable
+add_executable(hello src/main.cpp)
